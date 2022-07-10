@@ -5,6 +5,9 @@
     <div th:if="${#request.getParameter('msg')}" class="alert alert-primary" role="alert">
         <p th:text="${#request.getParameter('msg')}"></p>
     </div>
+    <div th:if="${#request.getParameter('msg2')}" class="alert alert-primary" role="alert">
+        <p th:text="${#request.getParameter('msg')}"></p>
+    </div>
 
     <div class="table-responsive">
         <table class="table table-striped table-sm">
