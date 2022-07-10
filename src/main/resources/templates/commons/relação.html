@@ -21,15 +21,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="f : ${computador}" th:object="${c}">
-                <td><img width="100px" th:src="@{'/images/' + *{imagem}}" alt="imagem"/></td>
+            <tr th:each="c : ${computador}" th:object="${c}">
+                <td ><img width="100px" th:src="@{'/images/' + *{imagem}}" alt="imagem"/></td>
                 <td th:text="*{id}"></td>
                 <td th:text="*{modelo}"></td>
                 <td th:text="*{marca}"></td>
                 <td th:text="*{preco}"></td>
                 <td th:text="*{descricao}"></td>
-                <td> <a th:href="@{'/editar/'+ *{id}}">Editar</a> </td>
-                <td> <a th:href="@{'/deletar/'+ *{id}}">Deletar</a></td>
+                <td > <a th:href="@{'/editar/'+ *{id}}">Editar</a> </td>
+                <td > <a th:href="@{'/deletar/'+ *{id}}">Deletar</a></td>
             </tr>
             </tbody>
         </table>
