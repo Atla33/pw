@@ -42,7 +42,9 @@ public class ComputadorController {
     }
 
     @PostMapping("salvar")
-    public String doSalvaComputador(@ModelAttribute @Valid Computador c, Errors errors, @RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes, HttpServletRequest request){
+    public String doSalvaComputador(@ModelAttribute @Valid Computador c, Errors errors,
+                                    @RequestParam("file") MultipartFile file,
+                                    RedirectAttributes redirectAttributes, HttpServletRequest request){
 
         if (errors.hasErrors()){
             System.out.println(errors.getAllErrors().stream().toArray());
@@ -53,6 +55,7 @@ public class ComputadorController {
 			System.out.println(file.getContentType());
 			System.out.println(file.getSize());
              */
+
             c.setImagem(file.getOriginalFilename());
             service.update(c);
             fileStorageService.save(file);
