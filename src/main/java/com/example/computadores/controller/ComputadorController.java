@@ -40,6 +40,15 @@ public class ComputadorController {
         return "index";
     }
 
+    @GetMapping("/admin")
+    public String getComputadoradmin(Model model, HttpServletResponse response){
+
+        List<Computador> computador = service.findAll();
+        model.addAttribute("computador", computador);
+
+        return "admin";
+    }
+
     @GetMapping("/cadastrar")
     public String doCadastrar(Model model){
         Computador c = new Computador();
