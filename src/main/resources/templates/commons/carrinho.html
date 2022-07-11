@@ -19,9 +19,7 @@
                 <th scope="col">Marca</th>
                 <th scope="col">Preço</th>
                 <th scope="col">Descrição</th>
-                <th scope="col">Editar</th>
                 <th scope="col">Deletar</th>
-                <th scope="col">Adicionar Carrinho</th>
             </tr>
             </thead>
             <tbody>
@@ -32,9 +30,8 @@
                 <td th:text="*{marca}"></td>
                 <td th:text="*{preco}"></td>
                 <td th:text="*{descricao}"></td>
-                <td > <a th:href="@{'/editar/'+ *{id}}">Editar</a> </td>
                 <td > <a th:href="@{'/deletar/'+ *{id}}">Deletar</a></td>
-                <td > <a th:href="@{'/adicionarcarrinho/'+ *{id}}">Adicionar Carrinho</a></td>
+                <td > <a th:href="@{'/addItemCarrinho'+ *{id}}">Adicionar Carrinho</a></td>
             </tr>
             </tbody>
         </table>
